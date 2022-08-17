@@ -1,0 +1,16 @@
+Annika:
+- alles Scraping in eine Funktion schreiben
+- try except => Wenn kein Eintrag gefunden "kein Preis" reinschreiben
+- Funktion 50 mal durch iterieren für 50+ erste Seiten
+- nach Ortsangabe (Stadtname, PLZ) suchen => später Geomap einfügen
+- AutoDF["car"] anschauen, ob Ausstattung komplett drin und Unterüberschrift mit drin ist; wenn nicht, schauen, ob Unterüberschrift abziehbar
+
+Oli:
+- weitere Visualisierungen anschauen
+- Datenaufbereitung weiterführen
+- Geomap, sobald Orte verfügbar
+- später dann extra Spalte einfügen als boolean, ob zB. Klima vorhanden oder nicht
+
+wenn am Projektende noch Zeit ist:
+- DF in SQL speichern
+- Query auf SQL
