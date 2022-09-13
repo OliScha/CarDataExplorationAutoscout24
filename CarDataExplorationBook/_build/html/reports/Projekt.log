@@ -32,8 +32,16 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-['AutoDFraw=pd.DataFrame()', 'pageCarDF=pd.DataFrame()', 'baselink = "https://www.autoscout24.de/lst?fregto="', 'fregtoList = list(range(1995, 2022, 1))', '#fregfromList = list(range(1991, 2021, 2))']
-...
-['for freg in fregtoList:', '    for page in range(20):', '        URL = baselink + str(freg) + "&page=" + str(page)', '        pageCarDF = extractPageCarDF(URL)', '        AutoDFraw=pd.concat([AutoDFraw, pageCarDF],axis=0, ignore_index=True)']
+AutoDFraw=pd.DataFrame()
+pageCarDF=pd.DataFrame()
+baselink = "https://www.autoscout24.de/lst?fregfrom="
+fregList = list(range(1990, 2022, 1))
+
+for freg in fregList:
+    for page in range(20):
+        URL = baselink + str(freg) + "&fregto=" + str(freg) + "&page=" + str(page)
+        pageCarDF = extractPageCarDF(URL)
+        AutoDFraw=pd.concat([AutoDFraw, pageCarDF],axis=0, ignore_index=True)
+
 -------------------
 
